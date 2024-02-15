@@ -1,6 +1,9 @@
 import { ModeToggle } from "@/components/ui/ModeToggle";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { FileUp, Mic, Send } from "lucide-react";
 
 export default function Home() {
   return (
@@ -18,9 +21,25 @@ export default function Home() {
             <Button>Click me</Button>
             <ModeToggle />
           </Card>
-          <div className="w-full flex gap-4">
-            <Button>Click me</Button>
-            <ModeToggle />
+          <div className="w-full flex gap-2 mx-2 md:mx-4 lg:mx-auto lg:max-w-2xl xl:max-w-7xl">
+            <Card className="w-full flex gap-4 p-2 bg-gray-900 rounded-full">
+              <Textarea
+                className="rounded-full min-h-1"
+                rows={1}
+                placeholder="Message Potion here ..."
+              />
+              <Button size="icon" className="rounded-full">
+                <FileUp />
+              </Button>
+              <Button size="icon" className="rounded-full">
+                <Mic />
+              </Button>
+            </Card>
+            <Card className="flex gap-4 p-2 bg-gray-900 rounded-full">
+              <Button size="icon" className="rounded-full">
+                <Send />
+              </Button>
+            </Card>
           </div>
         </div>
       </div>
