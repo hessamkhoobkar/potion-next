@@ -3,22 +3,9 @@ import { ModeToggle } from "@/components/ui/ModeToggle";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuLabel,
-  DropdownMenuRadioGroup,
-  DropdownMenuRadioItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { FileUp, Mic, Send } from "lucide-react";
-import { useState } from "react";
-import Image from "next/image";
 
 export default function Home() {
-  const [position, setPosition] = useState("pro");
-
   const autoGrow = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     console.log(parseInt(e.target.style.height));
 
@@ -36,93 +23,8 @@ export default function Home() {
         </div>
         <div className="grow flex flex-col gap-4">
           <div className="w-full flex gap-4">
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost">
-                  <div className="flex items-end gap-2">
-                    <Image
-                      src={"/images/logo/Potion.png"}
-                      alt="logotype - word potion"
-                      width={64}
-                      height={30}
-                    />
-                    <Image
-                      src={"/images/logo/Pro.png"}
-                      alt="logotype - word lite"
-                      width={28}
-                      height={15}
-                    />
-                  </div>
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="w-56">
-                <DropdownMenuRadioGroup
-                  value={position}
-                  onValueChange={setPosition}
-                >
-                  <DropdownMenuRadioItem value="lite">
-                    <div className="flex flex-col gap-2 pt-2">
-                      <div className="flex items-end gap-2">
-                        <Image
-                          src={"/images/logo/Potion.png"}
-                          alt="logotype - word potion"
-                          width={64}
-                          height={30}
-                        />
-                        <Image
-                          src={"/images/logo/Lite.png"}
-                          alt="logotype - word lite"
-                          width={28}
-                          height={15}
-                        />
-                      </div>
-                      <span className="text-sm opacity-50">Our base modal</span>
-                    </div>
-                  </DropdownMenuRadioItem>
-                  <DropdownMenuRadioItem value="pro">
-                    <div className="flex flex-col gap-2 pt-2">
-                      <div className="flex items-end gap-2">
-                        <Image
-                          src={"/images/logo/Potion.png"}
-                          alt="logotype - word potion"
-                          width={64}
-                          height={30}
-                        />
-                        <Image
-                          src={"/images/logo/Pro.png"}
-                          alt="logotype - word lite"
-                          width={28}
-                          height={15}
-                        />
-                      </div>
-                      <span className="text-sm opacity-50">Our base modal</span>
-                    </div>
-                  </DropdownMenuRadioItem>
-                  <DropdownMenuRadioItem value="max">
-                    <div className="flex flex-col gap-2 pt-2">
-                      <div className="flex items-end gap-2">
-                        <Image
-                          src={"/images/logo/Potion.png"}
-                          alt="logotype - word potion"
-                          width={64}
-                          height={30}
-                        />
-                        <Image
-                          src={"/images/logo/Max.png"}
-                          alt="logotype - word lite"
-                          width={28}
-                          height={15}
-                        />
-                      </div>
-                      <span className="text-sm opacity-50">Our base modal</span>
-                    </div>
-                  </DropdownMenuRadioItem>
-                </DropdownMenuRadioGroup>
-              </DropdownMenuContent>
-            </DropdownMenu>
-            <Button className="ms-auto bg-gradient-to-br from-primary to-secondary font-bold">
-              Start new Chat
-            </Button>
+            <Button>Click me</Button>
+            <ModeToggle />
           </div>
           <Card className="grow w-full flex gap-4 p-4 dark:border-gray-900">
             <Button>Click me</Button>
@@ -143,13 +45,10 @@ export default function Home() {
               <Button size="icon" variant="ghost">
                 <Mic />
               </Button>
+              <Button size="icon">
+                <Send className="w-6 h-6" />
+              </Button>
             </Card>
-            <Button
-              size="icon"
-              className="bg-gradient-to-br from-primary to-secondary font-bold"
-            >
-              <Send className="w-6 h-6" />
-            </Button>
           </div>
         </div>
       </div>

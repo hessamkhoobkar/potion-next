@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import Sidebar from "@/components/application/Sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +25,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div className="w-full h-dvh flex">
+            <Sidebar />
+            <div className="grow z-10">{children}</div>
+          </div>
         </ThemeProvider>
       </body>
     </html>
