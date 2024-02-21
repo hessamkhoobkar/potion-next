@@ -29,7 +29,7 @@ const menuContent = [
   },
 ];
 
-export function UserDropdown() {
+export default function UserDropdown() {
   const menuItems = menuContent.map(({ label, icon, shortcut }) => (
     <DropdownMenuItem key={label}>
       {icon}
