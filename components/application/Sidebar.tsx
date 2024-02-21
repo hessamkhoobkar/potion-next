@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import ChatHistory from "@/components/application/sidebar/ChatHistory";
 import Image from "next/image";
+import { UserDropdown } from "./sidebar/UserDropdown";
 
 export default function Sidebar() {
   return (
@@ -27,9 +28,7 @@ export default function Sidebar() {
         <Button variant="ghost" className="w-full">
           Upgrade Plan
         </Button>
-        <Button variant="ghost" className="w-full">
-          Monier Herradis
-        </Button>
+        <UserDropdown />
       </div>
     </div>
   );
