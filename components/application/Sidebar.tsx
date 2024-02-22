@@ -5,7 +5,7 @@ import UserDropdown from "@/components/application/sidebar/UserDropdown";
 
 export default function Sidebar() {
   return (
-    <div className="w-72 h-dvh flex flex-col z-10 text-white overflow-hidden">
+    <div className="w-72 h-dvh flex flex-col z-10 overflow-hidden">
       <SidebarLogo />
       <ChatHistory />
       <div className="w-full flex-col p-4 pe-2 border-t">
