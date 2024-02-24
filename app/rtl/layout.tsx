@@ -17,17 +17,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fa" dir="rtl">
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
+          themes={["light", "dark"]}
         >
           <div className="w-full h-dvh flex">
             <Sidebar />
-            <div className="grow z-10">{children}</div>
+            <div className="grow z-10">
+              <div className="w-full h-full flex flex-col items-center justify-center p-2">
+                <div className="w-full h-full flex p-4 bg-background border border-border rounded-3xl">
+                  {children}
+                </div>
+              </div>
+            </div>
           </div>
         </ThemeProvider>
       </body>

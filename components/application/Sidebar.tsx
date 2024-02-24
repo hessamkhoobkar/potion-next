@@ -8,7 +8,7 @@ export default function Sidebar() {
     <div className="w-72 h-dvh flex flex-col z-10 overflow-hidden">
       <SidebarLogo />
       <ChatHistory />
-      <div className="w-full flex-col p-4 pe-2 border-t">
+      <div className="w-full flex-col p-4 pt-3 pe-2 border-t">
         <UpgradeButton />
         <UserDropdown />
       </div>
